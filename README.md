@@ -49,7 +49,13 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-7. Run server:
+7. Run celery:
+
+```
+celery -A comments worker -l info
+```
+
+8. Run server:
 
 ```
 python manage.py runserver

@@ -45,6 +45,13 @@ class CommentTone(models.Model):
         """ Get this tone type's name """
         return next((tone_name for tone_id, tone_name in self.TONE_CHOICES if tone_id == self.tone_type), 'Unknown')
 
+    @tone_name.setter
+    def tone_name(self, name):
+        try:
+            self.tone_type = next((tone_id for tone_id, tone_name in self.TONE_CHOICES if tone_name == name))
+        except StopIteration:
+            raise ValueError('Invalid tone name: {}'.format(name))
+
     def __str__(self):
         """ Get comment tone name in the form "tone_name: score" """
         return '{}: {}'.format(self.tone_name.capitalize(), self.score)

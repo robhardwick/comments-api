@@ -135,3 +135,15 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10
 }
+
+
+# Celery
+# http://docs.celeryproject.org/en/latest/
+
+CELERY_broker_url = 'amqp://guest:guest@localhost:5672//'
+
+
+# Comments API
+
+WATSON_API_URL = 'https://watson-api-explorer.mybluemix.net/tone-analyzer/api/v3/tone'
+WATSON_API_VERSION = '2017-06-23'
