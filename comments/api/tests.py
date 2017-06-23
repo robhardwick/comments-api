@@ -65,7 +65,8 @@ class AppTestCase(TestCase):
         response = self.client.get('/api/9999/', format='json')
         self.assertEqual(response.status_code, 404)
 
-    def test_comment_create(self):
+    @patch('comments.api.tasks.fetch_tone')
+    def test_comment_create(self, mock_task):
         """ Test comment creation """
 
         # Perform request that should succeed
@@ -95,7 +96,8 @@ class AppTestCase(TestCase):
         self.assertIn('content', data)
         self.assertListEqual(data['content'], ['This field may not be blank.'])
 
-    def test_comment_update(self):
+    @patch('comments.api.tasks.fetch_tone')
+    def test_comment_update(self, mock_task):
         """ Test comment updating """
 
         # Perform request that should succeed

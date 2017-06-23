@@ -5,6 +5,7 @@ import requests
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import Error
+from django.core.cache import cache
 
 from .models import Comment, CommentTone
 
@@ -97,3 +98,8 @@ def fetch_tone(comment_pk):
     except Error as e:
         logger.error('Error adding comment tones: {}'.format(e))
         return
+
+    # Invalidate cache
+    # TODO: Only invalidate the relevant cache keys instead of clearing the whole cache
+    # as this is currently killing performance!
+    cache.clear()
