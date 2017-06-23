@@ -1,0 +1,112 @@
+[
+{
+  "model": "api.commenttone",
+  "pk": 1,
+  "fields": {
+    "comment_id": 1,
+    "tone_type": 3,
+    "score": 0.9,
+    "created": "2017-06-23T14:47:30.460Z",
+    "modified": "2017-06-23T14:47:30.460Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 2,
+  "fields": {
+    "comment_id": 1,
+    "tone_type": 0,
+    "score": 0.1,
+    "created": "2017-06-23T14:47:42.998Z",
+    "modified": "2017-06-23T14:47:42.998Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 3,
+  "fields": {
+    "comment_id": 1,
+    "tone_type": 1,
+    "score": 0.1,
+    "created": "2017-06-23T14:47:49.178Z",
+    "modified": "2017-06-23T14:47:49.178Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 4,
+  "fields": {
+    "comment_id": 1,
+    "tone_type": 2,
+    "score": 0.2,
+    "created": "2017-06-23T14:47:55.981Z",
+    "modified": "2017-06-23T14:47:55.981Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 5,
+  "fields": {
+    "comment_id": 1,
+    "tone_type": 4,
+    "score": 0.3,
+    "created": "2017-06-23T14:48:04.240Z",
+    "modified": "2017-06-23T14:48:04.240Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 6,
+  "fields": {
+    "comment_id": 2,
+    "tone_type": 0,
+    "score": 0.8,
+    "created": "2017-06-23T14:48:14.170Z",
+    "modified": "2017-06-23T14:48:14.170Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 7,
+  "fields": {
+    "comment_id": 2,
+    "tone_type": 1,
+    "score": 0.5,
+    "created": "2017-06-23T14:48:20.808Z",
+    "modified": "2017-06-23T14:48:20.808Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 8,
+  "fields": {
+    "comment_id": 2,
+    "tone_type": 2,
+    "score": 0.2,
+    "created": "2017-06-23T14:48:28.123Z",
+    "modified": "2017-06-23T14:48:28.123Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 9,
+  "fields": {
+    "comment_id": 2,
+    "tone_type": 3,
+    "score": 0.01,
+    "created": "2017-06-23T14:48:35.656Z",
+    "modified": "2017-06-23T14:48:35.656Z"
+  }
+},
+{
+  "model": "api.commenttone",
+  "pk": 10,
+  "fields": {
+    "comment_id": 2,
+    "tone_type": 4,
+    "score": 0.3,
+    "created": "2017-06-23T14:48:44.200Z",
+    "modified": "2017-06-23T14:48:44.200Z"
+  }
+}
+]

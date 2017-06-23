@@ -26,6 +26,8 @@ class CommentViewSet(viewsets.ModelViewSet):
     """
     queryset = Comment.objects.all().order_by('-created')
     serializer_class = CommentSerializer
+    filter_fields = ('sku',)
+    ordering = ('created',)
 
     def perform_create(self, serializer):
         """ Queue fetch tone task after creating comment """
