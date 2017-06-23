@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Comments API</h1>
+    <ul>
+        <li><a href="{% url 'api:comment-list' %}">API</a></li>
+        <li><a href="{% url 'api-docs:docs-index' %}">Documentation</a></li>
+        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+    </ul>
+{% endblock %}
