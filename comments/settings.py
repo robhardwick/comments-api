@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_swagger',
     'django_filters',
     'comments.api',
 ]
@@ -168,6 +169,15 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
+
+# Django REST Swagger
+# https://marcgibbons.github.io/django-rest-swagger/
+
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+    'SECURITY_DEFINITIONS': None,
+    'DOC_EXPANSION': 'list',
+}
 
 # Celery
 # http://docs.celeryproject.org/en/latest/

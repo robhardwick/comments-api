@@ -13,18 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-import os
-
 from django.conf.urls import url, include
 from django.views.generic import TemplateView
-from django.conf import settings
+from rest_framework_swagger.views import get_swagger_view
 from django.contrib import admin
 
-from rest_framework.documentation import include_docs_urls
-
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='index.html')),
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
     url(r'^api/', include('comments.api.urls')),
-    url(r'^docs/', include_docs_urls(title='Comments API')),
+    url(r'^docs/', get_swagger_view(title='Comments API'), name='api-docs'),
     url(r'^admin/', admin.site.urls),
 ]

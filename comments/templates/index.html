@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
+
+{% block breadcrumbs %}{% endblock %}
+
 {% block content %}
-    <h1>Comments API</h1>
-    <ul>
-        <li><a href="{% url 'api:comment-list' %}">API</a></li>
-        <li><a href="{% url 'api-docs:docs-index' %}">Documentation</a></li>
-        <li><a href="{% url 'admin:index' %}">Admin</a></li>
-    </ul>
+    <div class="content-main" role="main" aria-label="{% trans "main content" %}" style="padding-top: 60px;">
+        <div class="page-header">
+            <h1>Comments API</h1>
+        </div>
+        <ul>
+            <li><a href="{% url 'api:comment-list' %}">API</a></li>
+            <li><a href="{% url 'api-docs' %}">Documentation</a></li>
+            <li><a href="{% url 'admin:index' %}">Admin</a></li>
+        </ul>
+    </div>
 {% endblock %}
