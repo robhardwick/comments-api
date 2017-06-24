@@ -134,16 +134,26 @@ STATIC_URL = '/static/'
 # Caching
 # https://docs.djangoproject.com/en/1.11/topics/cache/
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://localhost:6379/1',
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient'
-        },
-        'KEY_PREFIX': 'commentsapi',
+if DEBUG:
+    # Use local memory cache during development so it's cleared on server reload
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': 'commentsapi',
+        }
     }
-}
+else:
+    # Use Redis cache in production
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_redis.cache.RedisCache',
+            'LOCATION': 'redis://localhost:6379/1',
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient'
+            },
+            'KEY_PREFIX': 'commentsapi',
+        }
+    }
 
 
 # Django REST framework
