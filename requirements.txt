@@ -9,7 +9,7 @@ Django==1.11.2
 django-filter==1.0.4
 django-redis==4.8.0
 django-rest-swagger==2.1.2
-djangorestframework==3.6.3
+djangorestframework==3.11.2
 idna==2.5
 itypes==1.1.0
 Jinja2==2.9.6
